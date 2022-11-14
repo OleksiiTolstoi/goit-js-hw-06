@@ -1,10 +1,11 @@
-const newArrays = document.querySelector("ul").children.length;
-console.log(`Number of categories:`, newArrays);
+const newArrays = document.querySelectorAll(".item");
+console.log(`Number of categories:`, newArrays.length);
 
-const items = document.querySelectorAll(".item");
-items.forEach((element) => {
-  const title = element.querySelector("h2").textContent;
-  const itemsLength = element.querySelectorAll("li").length;
-  console.log(`Category: ${title}`);
-  console.log(`Elements: ${itemsLength}`);
-});
+newArrays.forEach(newFunction);
+
+function newFunction(category) {
+  const newTitleEl = category.firstElementChild;
+  console.log("Category:", newTitleEl.textContent);
+  const newElement = category.lastElementChild;
+  console.log("Elements:", newElement.childElementCount);
+}
