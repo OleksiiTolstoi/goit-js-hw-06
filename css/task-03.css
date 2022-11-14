@@ -1,18 +1,26 @@
 .gallery {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }
 
 .galley__item {
-  width: calc((100% - 30px * 2) / 3);
+  display: flex;
+  width: 375px;
+  padding: 20px;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #8f8f8f;
 }
 
 .gallery__img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-color: rgba(248, 238, 238, 0.63);
+  object-fit: contain;
+  object-position: center;
 }
